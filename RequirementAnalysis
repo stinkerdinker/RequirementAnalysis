@@ -47,7 +47,7 @@ The System will then display a confirmation message to the user
 The user then either continues to add more income/expense/budget information or may also log out. 
 Extensions:
 1a. The authentication fails: The user is prompted to re-enter their username and password or to reset their password.
-3a. Insufficient Funds: The system notifies the user that they entered an amount that is invalid (e.g. entering a letter character or negative number for expense) and will prompt the user to enter a valid amount 
+3a. Insufficient Funds: The system notifies the user that they entered an amount that is invalid (e.g. entering a letter character or negative number for expense) and will prompt the user to enter a valid amount.
 Special Requirements:
 The system must comply with FERPA for protecting student records.
 Technology and Data Variations List:
@@ -74,7 +74,7 @@ The System will then display a confirmation message and display the budgeting in
 The user then either continues to add more income/expense/budget information or may also log out. 
 Extensions:
 1a. The authentication fails: The user is prompted to re-enter their username and password or to reset their password.
-3a. Invalid Amount: The system notifies the user that they entered an amount that is invalid (e.g. entering a letter character or negative number for budget) and will prompt the user to enter a valid amount 
+3a. Invalid Amount: The system notifies the user that they entered an amount that is invalid (e.g. entering a letter character or negative number for budget) and will prompt the user to enter a valid amount.
 3b. No Income and/or Expense found: The User has not inputted any income or expenses, so the system is unable to calculate and recommend the user a budget. Will notify the user to input income and expense information. 
 Special Requirements:
 The system must comply with FERPA for protecting student records
@@ -82,7 +82,7 @@ Technology and Data Variations List:
 Authentication Systems: Could include 2-factor authentication (2FA) or single sign-on (SSO) for added security.
 Data Storage: The User’s credentials should be stored using encryption methods
 Artificial Intelligence: Will provide suggestions for the user’s budget based on their given income and expenses
-Frequency of Occurrence
+Frequency of Occurrence:
 This will most likely occur infrequently, possibly the first time the user sets their income and expenses and then any other time the user would like to adjust their budget. 
 
 Use Case UC4: Automatic Categorization
@@ -104,9 +104,10 @@ Technology and Data Variations List:
 Authentication Systems: Could include 2-factor authentication (2FA) or single sign-on (SSO) for added security.
 Data Storage: The User’s credentials should be stored using encryption methods
 Frequency of Occurrence
-Automatic categorization should occur anytime there is a new income or expense added to the table. 
+Automatic categorization should occur anytime there is a new income or expense added to the table.
+
 Non functional Requirement: 
-Security: In-app password locke
+Security: In-app password locker.
 ______________________________________________________________________________
 
 Jake | Four Functional Requirements
@@ -143,8 +144,8 @@ This use case is expected to occur infrequently, primarily during emergency situ
 Use Case UC6: Dark / Light mode, setting to Dark mode
 Primary Actor: User (Student or authorized user)
 Stakeholders and interests:
-	User: 
-Wants to personalize the display settings for comfort
+User:
+Wants to personalize the display settings for comfort.
 Desires a simple and persistent setting that works across devices.
 Preconditions:
 User must be authenticated as a valid viewer (similar to HokieSpa’s FERPA authentication) and access their settings
@@ -172,7 +173,9 @@ This use case is expected to occur infrequently, primarily during when the user 
 Use Case UC7: Budget Account Creation (User ID/ Password)
 Primary Actor: User (Student or authorized user)
 Stakeholders and interests:
-User: Wants a secure and user-friendly way to create a budget account. Needs the system to store credentials safely and enable future access.
+User:
+Wants a secure and user-friendly way to create a budget account.
+Needs the system to store credentials safely and enable future access.
 Preconditions:
 User must be authenticated as a valid viewer (similar to HokieSpa’s FERPA authentication), The user has not yet created a budget account or is setting up a new one.
 Success guarantee:
@@ -189,7 +192,6 @@ The user logs out
 Extensions:
 1a. Weak Password: The password if too weak may make the system ask the user for a stronger password by giving tips
 2a. User ID already exists: If the ID already exists the user will be prompted to choose another ID.
-3a. 
 Special Requirements: 
 The system must enforce strong password policies and use encryption to store the credentials securely.
 The user’s credentials should be stored in compliance with institutional and regulatory security policies
@@ -236,8 +238,10 @@ Anonymity options: The option for the user to be anonymously getting or giving a
 Advisor matching: The system should try to match Advisor to Users who are/were in a similar financial situation to them.
 Frequency of Occurrence:
 This use case is expected to occur occasionally, depending on the demand for peer financial advice.
+
 Non functional Requirement: 
-Usability: User-friendly interface (GUI), guided walkthrough
+Usability: User-friendly interface (GUI), guided walkthrough.
+
 Use Case Diagram:
 
 ______________________________________________________________________________
@@ -251,7 +255,8 @@ Stakeholders and interests:
 Wants to see a budget breakdown on how they should spend their money in the current month
 Preconditions: 
 User must be authenticated as a valid user
-Success guarantee: A budget, with corresponding income and expenditure objects are created and saved to the current user/viewer
+Success guarantee:
+A budget, with corresponding income and expenditure objects are created and saved to the current user/viewer.
 Main Success Scenario:
 The user logs into the system using secure authentication
 User navigates to the budget section, and creates a new budget
@@ -260,25 +265,27 @@ User enters their savings goals
 System creates a budget based on user input and saves it to user’s profile
 User logs out
 Extensions:
-1a, Already has a budget: If the user already has a budget, they will be prompted with the choice to either create a new budget or edit the current budget.
-2a, Invalid Inputs: If a user enters an invalid input, such as negative numbers for expenditures or income, the system will pop up an error and allow the user to change the values in question.
-3a, User log out during creation: If the user logs out during the budget creation process all unsaved data will be lost.
+1a. Already has a budget: If the user already has a budget, they will be prompted with the choice to either create a new budget or edit the current budget.
+2a. Invalid Inputs: If a user enters an invalid input, such as negative numbers for expenditures or income, the system will pop up an error and allow the user to change the values in question.
+3a. User log out during creation: If the user logs out during the budget creation process all unsaved data will be lost.
 Special Requirements:
 The system must ensure user data privacy and security through encryption.
 The budget visualization should be user-friendly.
 The application should be usable on various platforms (desktop, mobile, tablet).
 Technology and Data Variations List: 
-Data Storage: Use of a saecure database for budget data.
+Data Storage: Use of a secure database for budget data.
 Visualization Tools: Libraries like Chart.js or D3.js for budget representation.
-Authentication: FERPA-based login
+Authentication: FERPA-based login.
 Frequency of Occurrence
 The frequency depends on how often a user would check their budget during a month. At least monthly.
 
 Use Case UC10: Share, print, or export Budget Sheet
 Primary Actor: User
 Stakeholders and interests: 
-	User: Want the ability to share, print, or export their budget for other uses or to collaborate with others.
-	Collaborator: Wants to view the user’s budget
+User:
+Want the ability to share, print, or export their budget for other uses or to collaborate with others.
+	Collaborator:
+Wants to view the user’s budget
 Preconditions: 
 User must be authenticated as a valid user
 User must have an existing budget
@@ -309,49 +316,51 @@ This option is expected to be used infrequently as users won’t need to downloa
 Use Case UC11: Annual Budget Planning
 Primary Actor: User
 Stakeholders and interests:
-User: Wants to see an annual budget breakdown to help manage their finances 
+User: Wants to see an annual budget breakdown to help manage their finances.
 Preconditions: 
-User is a valid user
-User has a monthly budget
+User is a valid user.
+User has a monthly budget.
 Success guarantee: 
-An annual budget is created and saved to user’s profile
+An annual budget is created and saved to user’s profile.
 Main Success Scenario:
-The user logs into the system using secure authentication
-User navigates to the budget section
-User selects to create a new annual budget
-System calculates the annual budget based off of user’s monthly budget
-User reviews created budget, and makes edits if necessary
-System saves the budget to user’s profile
-User logs out
+The user logs into the system using secure authentication.
+User navigates to the budget section.
+User selects to create a new annual budget.
+System calculates the annual budget based off of user’s monthly budget.
+User reviews created budget, and makes edits if necessary.
+System saves the budget to user’s profile.
+User logs out.
 Extensions:
 1a. Invalid input: User enters invalid data while editing the annual budget, system displays error and allows user to edit bad values. 
 Special Requirements:
 The system must ensure that all financial data is encrypted and securely stored.
-The annual budget visualization should be intuitive
+The annual budget visualization should be intuitive.
 Technology and Data Variations List:
 Data Storage: Use of a secure database for budget data.
 Visualization Tools: Libraries like Chart.js or D3.js for budget representation.
-Authentication: FERPA-based login
+Authentication: FERPA-based login.
 Frequency of Occurrence
 Uncommon, likely once a year.
 
 Use Case UC12: Financial transaction reminders
 Primary Actor: User
 Stakeholders and interests: 
-	User: Wants to receive reminders for upcoming recurring payments (rent, utilities…)
-	Service Providers: Have interest in being paid on time
+	User:
+Wants to receive reminders for upcoming recurring payments (rent, utilities…).
+	Service Providers:
+Have interest in being paid on time.
 Preconditions: 
-User is a valid user
+User is a valid user.
 Success guarantee: 
-User will receive notifications according to their preferences
+User will receive notifications according to their preferences.
 Main Success Scenario:
-The user logs into the system using secure authentication
-User navigates to reminders section
-User sets up a new financial transaction reminder
-User inputs a name for the reminder, the amount due, the due date, preferred notification settings, and the frequency of the reminder (one time or recurring)
-System saves the reminders and links them to the user profile
-User logs out
-As the due date happens the reminder is sent
+The user logs into the system using secure authentication.
+User navigates to reminders section.
+User sets up a new financial transaction reminder.
+User inputs a name for the reminder, the amount due, the due date, preferred notification settings, and the frequency of the reminder (one time or recurring).
+System saves the reminders and links them to the user profile.
+User logs out.
+As the due date happens the reminder is sent.
 Extensions:
 1a. Reminder edits: If user wants to change an existing reminder, they select the reminder to edit and edit or delete the reminder
 2a. Preferred notification settings: Users can choose to be reminded through text, email, or phone push notifications. 
@@ -369,7 +378,8 @@ Frequency of Occurrence
 Users won’t have to create or change reminders often probably only a couple of times a year. 
 
 Non functional Requirement: 
-Reliability: Automated backup in cloud storage 
+Reliability: Automated backup in cloud storage.
+
 Use Case Diagram:
 ______________________________________________________________________________
 
@@ -396,7 +406,7 @@ System logs all updates made to the budget and generates an updated financial ov
 System generates a report for the student showing the remaining budget and upcoming allowances.
 System synchronizes with external financial services for real-time balance updates (if linked to bank accounts).
 Extensions:
-1a.Invalid or suspicious transactions: System signals errors or suspicious activity (e.g., spending outside usual patterns)..
+1a.Invalid or suspicious transactions: System signals errors or suspicious activity (e.g., spending outside usual patterns).
 2a. Spending exceeds budget limit: System sends a warning to both parent and student.
 3a. External financial service sync fails: System signals the failure and queues the update for retry.
 Special Requirements: 
@@ -416,9 +426,12 @@ Parents typically review the student’s financial activities weekly or monthly,
 Use Case UC14: Debt Tracking Mode
 Primary Actor: User (Student)
 Stakeholders and interests:
-Parent: Wants an accurate, real-time overview of their outstanding debts, including balances, interest, and due dates.
-Student: Wants to monitor the student’s financial health, particularly in regard to accumulated debt.
-Software Provider: Ensures reliable tracking, timely notifications, and accurate calculation of balances, interest rates, and repayment schedules.
+Parent:
+Wants an accurate, real-time overview of their outstanding debts, including balances, interest, and due dates.
+Student:
+Wants to monitor the student’s financial health, particularly in regard to accumulated debt.
+Software Provider:
+Ensures reliable tracking, timely notifications, and accurate calculation of balances, interest rates, and repayment schedules.
 Preconditions:
 User is identified, authenticated, and has access to the debt tracking software.
 Success guarantee:
@@ -433,8 +446,6 @@ User adds new debts (e.g., student loans, credit card debt), and the system inte
 System logs debt history, generating a timeline showing repayment activity and how the debt balance has changed over time.
 System synchronizes with external financial services to track debts in real-time, ensuring up-to-date information (if connected to a bank or loan service).
 System generates reports on user debt for the current period (weekly, monthly, etc.), providing insights into total debt load and repayment progress.
-
-
 Extensions:
 1a.Incorrect debt details: System signals errors (e.g., wrong balance or interest rate) and notifies the user to confirm or edit the debt details.
 2a. Missed payment notification: System sends an alert indicating that a scheduled payment has been missed and outlines the potential consequences (e.g., late fees, increased interest).
@@ -444,8 +455,6 @@ System should provide real-time updates when debts are linked with external fina
 Notifications of due dates or changes in debt details must be sent promptly.
 The system should handle various types of debt, such as student loans, credit cards, and personal loans.
 Data and information should be secure, especially when synchronizing with external financial services.
-
-
 Technology and Data Variations List:
 Notifications can be sent via mobile app, email, or SMS.
 Transaction identifiers are entered via mobile banking apps, card swipes, or direct account linkage.
@@ -458,16 +467,16 @@ Parents typically review the student’s financial activities weekly or monthly,
 Use Case UC15:  Saving Goals
 Primary Actor: User (Student)
 Stakeholders and interests:
-User (Student): Wants to set and track specific savings goals, ensuring financial discipline and progress toward long-term financial objectives.
-Software Provider: Ensures that users can effectively create, track, and modify savings goals within the system, offering a user-friendly experience.
+User (Student):
+Wants to set and track specific savings goals, ensuring financial discipline and progress toward long-term financial objectives.
+Software Provider:
+Ensures that users can effectively create, track, and modify savings goals within the system, offering a user-friendly experience.
 Preconditions:
 User is logged into the system with an active budget account.
 User has access to the saving goals feature.
-
 Success guarantee:
 A new savings goal is created and tracked, with updates provided based on the user’s financial transactions and progress.
 Notifications are sent when significant progress is made or when goals are reached.
-
 Main Success Scenario:
 User selects the "Create Saving Goal" option from the dashboard.
 User enters goal details: goal name, target amount, and target date.
@@ -487,59 +496,58 @@ Users should be able to modify or cancel goals at any time without penalty.
 Notifications about goal progress should be customizable (e.g., weekly, monthly updates).
 System should allow flexible goal timelines and adjustments to contributions based on real-world events, like unexpected expenses or changes in income.
 System should handle multiple saving goals concurrently and prioritize user-defined goals when budget updates are made.
-
-
 Technology and Data Variations List:
 Saving goals can be tracked via mobile app, desktop software, or browser-based dashboard.
 Contributions can be adjusted automatically via linked bank accounts or manual input.
 System should send notifications via email, SMS, or in-app messaging, based on user preferences.
 Frequency of Occurrence:
 Users typically review their saving goals monthly, while the system provides real-time updates whenever contributions are made.
-
-
-Non functional Requirement: 
-Scalability: Optimize infrastructure using auto-scaling
 
 Use Case UC16:  Budget Analysis 
 Primary Actor: User (Student)
 Stakeholders and interests:
-User (Student): Wants to set and track specific savings goals, ensuring financial discipline and progress toward long-term financial objectives.
-Software Provider: Ensures that users can effectively create, track, and modify savings goals within the system, offering a user-friendly experience.
+Student:
+I Want accurate and fast budget analysis and feedback on spending.
+Parent:
+Interested in monitoring and ensuring the student stays within their budget (if Parent Mode is active).
+Software Provider:
+Ensure that the budget analysis is accurate, intuitive, and provides meaningful feedback.
 Preconditions:
-User is logged into the system with an active budget account.
-User has access to the saving goals feature.
-
+Students are identified and authenticated in the budget management system.
+The student has input their financial data, such as income, expenses, and savings.
 Success guarantee:
-A new savings goal is created and tracked, with updates provided based on the user’s financial transactions and progress.
-Notifications are sent when significant progress is made or when goals are reached.
-
+Budget is analyzed based on the student’s financial data.
+Alerts are triggered if spending exceeds predefined limits.
+Categories of spending (e.g., groceries, entertainment, tuition) are updated based on actual expenditures.
+A detailed report of the student's budget and financial situation is generated.
 Main Success Scenario:
-User selects the "Create Saving Goal" option from the dashboard.
-User enters goal details: goal name, target amount, and target date.
-System prompts user to assign funds to the savings goal from available budget categories (e.g., monthly contributions).
-System calculates and displays the required monthly contribution to meet the target by the specified date.
-User confirms the goal and commits to the savings plan.
-System logs the savings goal, starts tracking progress, and displays it on the user’s dashboard.
-System sends periodic updates about progress (e.g., percentage of goal completed, upcoming contribution reminders).
-System notifies the user when the savings goal is achieved or if adjustments are needed based on changes in income or spending patterns.
+Students log into the budget analysis software.
+Students enter their income, expenses, and savings details.
+System processes and records the data and assigns them to predefined categories (e.g., food, rent, entertainment).
+System checks if the spending aligns with the predefined budget limits set by the student or parent.
+System calculates the total income, expenses, and savings.
+System compares the student’s spending with the predefined budget limits, notifying the student if they have exceeded any limits.
+Student views the budget analysis summary, which includes categories like income, total expenses, savings, and remaining balance.
 Extensions:
-1a. Insufficient Funds to Allocate to Goal: The system prompts the user to adjust their budget or lower the savings goal amount.
-2a. User Requests a Flexible Saving Plan: The system provides the option to adjust monthly contributions dynamically based on income fluctuations.
-3a. User Misses a Scheduled Contribution:The system sends a reminder and provides options to make up the missed contribution or adjust the goal's timeline.
+1a. System signals errors and rejects entry.
+2a. Student responds to the error:	
+3a. If the data is a typo or mistake, the student can manually correct it.
+4a. If the student is unsure about a certain category, the system prompts for more guidance or suggests common categories.
 Special Requirements: 
-The system should calculate progress and contributions in real-time based on current financial data.
-Users should be able to modify or cancel goals at any time without penalty.
-Notifications about goal progress should be customizable (e.g., weekly, monthly updates).
-System should allow flexible goal timelines and adjustments to contributions based on real-world events, like unexpected expenses or changes in income.
-System should handle multiple saving goals concurrently and prioritize user-defined goals when budget updates are made.
+System responds to budget analysis requests within 10 seconds 95% of the time.
+Alerts should be triggered automatically if any budget category exceeds the predefined limits.
+System must recover robustly in case of errors in syncing financial data or retrieving spending information.
 Technology and Data Variations List:
-Saving goals can be tracked via mobile app, desktop software, or browser-based dashboard.
-Contributions can be adjusted automatically via linked bank accounts or manual input.
-System should send notifications via email, SMS, or in-app messaging, based on user preferences.
+Financial data may be manually entered or imported from banking apps or spending trackers.
+Spending categories may include a range of predefined options or custom categories set by the student.
+System may retrieve financial transaction data directly from linked bank accounts or other financial apps.
 Frequency of Occurrence:
-Users typically review their saving goals monthly, while the system provides real-time updates whenever contributions are made.
+Students typically review their budget on a monthly or bi-weekly basis, but notifications about overspending are sent immediately if any limits are exceeded.
+
 Non functional Requirement: 
-Scalability: Optimize infrastructure using auto-scaling
+Scalability: Optimize infrastructure using auto-scaling.
+
+Use Case Diagram:
 
 ______________________________________________________________________________
 
@@ -548,7 +556,7 @@ Junjie | Four Functional Requirements
 Use Case UC17: Importing Bill and OCR PDF
 Primary Actor: User (Student or authorized user)
 Stakeholders and interests:
-User: To easily import bills and extract billing information using OCR technology in order to manage finances.
+User: To easily import bills and extract billing information using OCR technology in order to manage finances. Also, the user can choose bill files from their Email application, and then the Hokie Budgeting App will import that PDF.
 Preconditions: Users must be authenticated and have permission to upload bills.
 Success guarantee: The user successfully imported the bill, and the system extracted the relevant information through OCR to update the financial record.
 Main Success Scenario:
@@ -641,39 +649,141 @@ Special Requirements:
 The system should be capable of handling multiple income sources with different frequencies (daily, and weekly)
 Technology and Data Variations List:
 Simulation Algorithm: This algorithm should calculate the multiple income sources with different frequencies (daily, and weekly).
-Non functional Requirement: 
-Maintainability: Modular code structure, developer log 
-______________________________________________________________________________
-
-
-
-Rakan : Parts 3&4  : Class Diagram and One non functional Requirement: 
 
 Non functional Requirement: 
+Maintainability: Modular code structure, developer log.
+
+Use Case Diagram:
+
+_____________________________________________________________________________
+Rakan | Four Functional Requirements + class diagram + one Non functional requirement + Use case diagram 
+Use Case UC21: Investment Tracking
+Primary Actor:
+User (Student or authorized user)
+Stakeholders and Interests:
+User: Wants to monitor and track their investments in various assets (e.g., stocks, bonds, real estate) and observe performance over time.
+Institution: Ensures that users have access to accurate financial data and tools to manage investments responsibly.
+Preconditions:
+The user must be authenticated as a valid user.
+The user must have entered or linked investment accounts.
+Success Guarantee:
+The system successfully tracks and updates the user’s investments, providing accurate performance data and visual summaries.
+Main Success Scenario:
+The user logs into the system using secure authentication.
+The user navigates to the “Investment Tracking” section.
+The system retrieves investment data from linked accounts or manual entries.
+The system displays the user’s portfolio, including asset allocation, current values, gains/losses, and performance history.
+The user reviews the investment performance and may adjust or add new investments.
+The system updates the investment records and provides a confirmation.
+The user logs out.
+Extensions:
+1. Invalid account information: The system notifies the user that their linked investment account could not be accessed, and prompts them to re-enter the account credentials or update the link.
+2. No investment data found: The system informs the user that no investments have been entered or linked, and guides them on how to add investments.
+Special Requirements:
+The system must provide real-time updates for investments linked to external financial services.
+All financial data must be encrypted and securely stored.
+Technology and Data Variations List:
+Data Sources: Investment data may come from manually entered records or be automatically pulled from linked brokerage accounts.
+Visualization Tools: The system should display data using graphs or charts (e.g., performance line charts, asset allocation pie charts).
+Frequency of Occurrence:
+This use case is expected to occur frequently, as users may check their investment portfolio weekly or monthly to track performance.
+Use Case UC22: Cash Flow Management
+Primary Actor: User (Student or authorized user)
+Stakeholders and Interests:
+User: Wants to manage cash inflow and outflow efficiently and track cash balance over time.
+Institution: Ensures that users have a clear understanding of their liquidity and can manage their finances responsibly.
+Preconditions:
+The user must be authenticated as a valid user.
+The user must have entered income and expense data.
+Success Guarantee:
+The system provides a clear and accurate overview of cash inflows and outflows and tracks net cash flow over a specified period.
+Main Success Scenario:
+The user logs into the system using secure authentication.
+The user navigates to the "Cash Flow Management" section.
+The system displays a dashboard showing the user’s cash inflows (income) and outflows (expenses) for the current period.
+The user can filter by time period (weekly, monthly, quarterly).
+The system calculates the net cash flow for the specified period and displays the result to the user.
+The user reviews the cash flow data and logs out.
+Extensions: 
+1. Invalid inputs: The system prompts the user to correct any invalid entries related to income or expenses. 
+2. No transactions: If no income or expenses are entered, the system notifies the user and provides instructions for adding data.
+Special Requirements:
+The system should update cash flow data in real-time based on new income and expenses.
+All financial data must be stored securely.
+Technology and Data Variations List:
+Data Sources: Cash flow data may come from user-entered information or be automatically pulled from linked bank accounts.
+Visualization Tools: Display charts and graphs using D3.js or Chart.js.
+Frequency of Occurrence:
+Users are expected to check their cash flow on a monthly or weekly basis to ensure financial stability.
+Use Case UC23: Event-based Budgeting
+Primary Actor: User (Student or authorized user)
+Stakeholders and Interests:
+User: Wants to create budgets for specific events (e.g., vacations, weddings, or parties) and manage the associated expenses separately from regular budgets.
+Event Organizers: Interested in ensuring that events stay within budget and are well-financed.
+Preconditions:
+The user must be authenticated as a valid user.
+The user must have entered income and expense information for the event.
+Success Guarantee:
+The system successfully helps the user set a budget for the event and tracks expenses against it, ensuring that the event stays within financial limits.
+Main Success Scenario:
+The user logs into the system using secure authentication.
+The user navigates to the “Event Budgeting” section.
+The user selects an event type and sets a budget for the event.
+The system prompts the user to enter expected income (if applicable) and expenses related to the event.
+The system tracks actual expenses against the set budget and notifies the user of any budget overruns.
+The user reviews the event budget and can edit the budget or add new expenses at any time.
+The user logs out after completing the event budget setup.
+Extensions: 
+1. Budget exceeds limit: If the total event expenses exceed the set budget, the system alerts the user and provides suggestions for cutting costs. 
+2. Income changes: If expected income for the event changes, the user can update the budget accordingly.
+Special Requirements:
+The system should support budgeting for multiple events concurrently.
+The system must notify users of budget overruns in real-time.
+Technology and Data Variations List:
+Data Storage: The event budget should be saved and accessible for future reference.
+Notification Tools: Email or in-app alerts for budget updates or overruns.
+Frequency of Occurrence:
+This use case will occur whenever the user organizes events and needs to track the associated expenses.
+
+Use Case UC24: Separating Cash and Card Tracking
+Primary Actor: User (Student or authorized user)
+Stakeholders and Interests:
+User: Wants to track and manage cash and card transactions separately for better financial transparency.
+Institution: Ensures that users can accurately track all types of financial transactions.
+Preconditions:
+The user must be authenticated as a valid user.
+The user must have entered transactions for both cash and card.
+Success Guarantee:
+The system successfully tracks cash and card transactions separately and provides the user with an accurate overview of their financial activities.
+Main Success Scenario:
+The user logs into the system using secure authentication.
+The user navigates to the "Transaction Tracking" section.
+The user selects either the “Cash” or “Card” filter to view transactions.
+The system displays the cash or card transactions separately, with totals for each.
+The user can switch between views to compare cash and card spending.
+The system generates a report showing the total spending for both cash and card transactions.
+The user logs out.
+Extensions: 
+1. No transactions: If there are no transactions for either cash or card, the system prompts the user to add transaction data. 
+2. Invalid transaction entry: The system prompts the user to correct any invalid entries for cash or card transactions.
+Special Requirements:
+The system must be able to distinguish between cash and card transactions and store them securely.
+The user should be able to export separate cash and card reports.
+Technology and Data Variations List:
+Data Sources: Transactions may be manually entered or imported from bank and card accounts.
+Reporting Tools: Generate separate reports for cash and card using standard reporting libraries.
+Frequency of Occurrence:
+Users are expected to review their cash and card transactions on a weekly or monthly basis.
+
+One Non-functional Requirement: 
 
 Performance: The system should be able to handle multiple users simultaneously without any noticeable lag in performance, with response time less than 2 seconds.
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+Case Diagram :
 
 
 Class Diagram (Rakan): 
+
+
 
